@@ -1,6 +1,6 @@
 # Netlify config for Vite + React (TypeScript)
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
 
 # Build-time environment variables (non-secrets).
