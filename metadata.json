@@ -1,0 +1,5 @@
+{
+  "name": "Physics Simulation",
+  "description": "An interactive simulation for Grade 9 students to explore concepts of distance, displacement, speed, and velocity. Users can control a car's motion and observe real-time updates on graphs and data displays.",
+  "requestFramePermissions": []
+}

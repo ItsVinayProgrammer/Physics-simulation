@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Car Simulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.1.2"
+  }
+}
+</script>
+<style>
+      :root {
+        --accent-color: #f59e0b; /* A playful amber color */
+      }
+      @keyframes vehicle-rumble {
+        0% { transform: translateY(0) rotate(0.1deg); }
+        50% { transform: translateY(-1px) rotate(-0.1deg); }
+        100% { transform: translateY(0) rotate(0.1deg); }
+      }
+      .vehicle-animation {
+        animation: vehicle-rumble 0.2s ease-in-out infinite;
+      }
+
+      @keyframes drift {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100vw); }
+      }
+      .cloud-animation {
+        animation: drift 40s linear infinite;
+      }
+      .cloud-animation-fast {
+        animation: drift 25s linear infinite 5s;
+      }
+       @keyframes sun-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .sun-animation {
+         animation: sun-spin 60s linear infinite;
+      }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-sky-100 text-slate-700">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+# Netlify config for Vite + React (TypeScript)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Build-time environment variables (non-secrets).
+# For secrets, prefer Netlify Dashboard: Site settings -> Build & deploy -> Environment.
+[build.environment]
+  NODE_VERSION = "18"
+  NODE_ENV = "production"
+  VITE_API_URL = "http://localhost:5000/api"
+  VITE_APP_NAME = "Physics Simulation"
+  VITE_DEFAULT_LANGUAGE = "en"
+
+# SPA fallback (safe to keep even if you don't use client-side routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
